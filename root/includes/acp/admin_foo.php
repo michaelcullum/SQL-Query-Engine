@@ -11,7 +11,7 @@ class acp_sql_engine
       {
          case 'index':
             $this->page_title = 'ACP SQL Query Engine';
-            $this->tpl_name = 'acp_sql_query_engine';
+            $this->tpl_name = 'acp_sql_engine';
             break;
       }
 
