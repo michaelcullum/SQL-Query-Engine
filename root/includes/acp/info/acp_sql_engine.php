@@ -4,11 +4,11 @@ class acp_foo_info
     function module()
     {
         return array(
-            'filename'    => 'acp_foo',
-            'title'        => 'ACP_FOO',
-            'version'    => '1.2.3',
+            'filename'    => 'acp_sql_query_engine',
+            'title'        => 'ACP_SQL_ENGINE',
+            'version'    => '1.0.0',
             'modes'        => array(
-                'index'        => array('title' => 'ACP_FOO_INDEX_TITLE', 'auth' => 'acl_a_foo_auth', 'cat' => array('')),
+                'index'        => array('title' =>ACP_SQL_QUERY_ENGINE', 'auth' => 'acl_a_sql_eng_auth', 'sqlquery' => array('')),
             ),
         );
     }
