@@ -1,0 +1,24 @@
+<!-- INCLUDE overall_header.html -->
+<!-- IF S_VERSION_KEYWORD -->
+<!--
+/** 
+*
+* @author  SA007(http://sa007.cz.cc)
+* @package acp
+* @version $Id: SQL Query Engine 1.0.0
+* @copyright (c) Michael C. (SA007)
+* @license http://opensource.org/licenses/gpl-license.php GNU Public License 
+*
+*/
+//-->
+<!-- ENDIF -->
+
+<h1>{L_SQL_ENGINE}</h1>
+<p>{L_SQL_ENGINE_EXPLAIN}</p>
+<h4 style="font-family:verdana;color:red">{L_SQL_ENGINE_DISCLAIMER}</h4>
+<form action="{U_ACTION}" method="post">
+   <textarea style="width: 80%; height: 200px;" name="sql_data"></textarea><br />
+   <input type="submit" name="submit" value="{L_SUBMIT}" />
+</form>
+
+<!-- INCLUDE overall_footer.html -->
