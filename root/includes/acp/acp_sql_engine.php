@@ -1,10 +1,11 @@
 <?php
-/**
+/** 
 *
-* @package acp
-* @version $Id$
-* @copyright (c) 2005 phpBB Group
-* @license http://opensource.org/licenses/gpl-license.php GNU Public License
+* @author SA007 (http://sa007.cz.cc)
+* @package SQL Query Engine acp
+* @version [ALPHA] 1.0.0 "Kela"
+* @copyright (c) SA007 (Michael Cullum)
+* @license http://opensource.org/licenses/gpl-license.php GNU Public License 
 *
 */
 
@@ -34,7 +35,7 @@ class acp_sql_engine
 				$this->tpl_name = 'acp_sql_engine';
 				if(!$user->data['user_type'] == 3) // See if the user is a founder.
 				{
-					trigger_error($user->lang['MUST_BE_FOUNDER']);
+					trigger_error($user->lang['SQL_MUST_BE_FOUNDER']);
 				}
 				if ($submit && $sql_data)
 				{

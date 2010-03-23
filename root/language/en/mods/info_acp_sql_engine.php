@@ -1,10 +1,10 @@
 <?php
 /** 
 *
-* acp_add_user [English]
+* acp_sql_engine [English]
 *
-* @author SA007 : http://sa007.cz.cc
-* @package acp lang file
+* @author SA007 (http://sa007.cz.cc)
+* @package SQL Query Engine acp lang file
 * @version [ALPHA] 1.0.0 "Kela"
 * @copyright (c) SA007 (Michael Cullum)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License 
@@ -27,8 +27,8 @@ $lang = array_merge($lang, array(
 	'SQL_ENGINE_QUERY_PASS'		=> 'The query has sucesessfully been completed.',
 	'SQL_ENGINE_QUERIES_PASS'	=> 'The queries have been successfully completed.',
 	'SQL_ENGINE_RETURN'			=> 'Click here to return to the form.',
-	'MUST_BE_FOUNDER'			=> 'Only board founders may access this module.',
-	'SUBMIT'					=> 'Submit',
+	'SQL_MUST_BE_FOUNDER'		=> 'Only board founders may access this module.',
+	'SQL_SUBMIT'				=> 'Submit',
 ));
 
 ?>
