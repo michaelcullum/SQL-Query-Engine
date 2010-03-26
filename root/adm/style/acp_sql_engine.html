@@ -15,10 +15,18 @@
 
 <h1>{L_SQL_ENGINE}</h1>
 <p>{L_SQL_ENGINE_EXPLAIN}</p>
-<h4 style="font-family:verdana;color:red">{L_SQL_ENGINE_DISCLAIMER}</h4>
 <form action="{U_ACTION}" method="post">
-   <textarea style="width: 80%; height: 200px;" name="sql_data"></textarea><br />
-   <input type="submit" name="submit" value="{L_SQL_SUBMIT}" />
+	<fieldset><legend>{L_SQL_ENGINE}</legend>
+    <dl>
+    <dt><h4 style="font-family:verdana;color:red">{L_SQL_ENGINE_DISCLAIMER}</h4></dt>
+    <dd>
+   <textarea style="width: 80%; height: 200px;" name="sql_data"></textarea>
+   </dd>
+   </dl>
+   <p class="submit-buttons">
+   <input type="submit" class="button1" name="submit" value="{L_SQL_SUBMIT}" />
+   </p>
+   </fieldset>
 </form>
 
 <!-- INCLUDE overall_footer.html -->

@@ -37,10 +37,12 @@ class acp_sql_engine
 				{
 					trigger_error($user->lang['SQL_MUST_BE_FOUNDER']);
 				}
+				$submit = (isset($_POST['submit'])) ? true : false;
+				$sql_data = request_var('sql_data', '');
 				if ($submit && $sql_data)
 				{
 					$sql_ary = str_replace("\n", ' ', $sql_data);
-					$sql_data = str_replace('phpbb_', $table_prefix, $sql_data);
+					$sql_ary = str_replace('phpbb_', $table_prefix, $sql_ary);
 					$sql_ary = explode(';', $sql_data);
 					
 					// Loop through our sql queries

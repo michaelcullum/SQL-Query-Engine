@@ -21,7 +21,7 @@ class acp_sql_engine_info
 			'title'		=> 'ACP_SQL_ENGINE',
 			'version'	=> '1.0.0 "Kela"',
 			'modes'		=> array(
-				'bots'		=> array('title' => 'ACP_SQL_ENGINE', 'auth' => 'acl_a_', 'cat' => array('ACP_GENERAL_TASKS')),
+				'index'		=> array('title' => 'ACP_SQL_ENGINE', 'auth' => 'acl_a_', 'cat' => array('ACP_GENERAL_TASKS')),
 			),
 		);
 	}
