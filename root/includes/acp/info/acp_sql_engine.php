@@ -12,7 +12,7 @@
 /**
 * @package module_install
 */
-class acp_bots_info
+class acp_sql_engine_info
 {
 	function module()
 	{
