@@ -16,8 +16,8 @@
 */
 if (empty($lang) || !is_array($lang))
 {
-	$lang = array();
-
+    $lang = array();
+}
 
 $lang = array_merge($lang, array(
 	'ACP_SQL_ENGINE'			=> 'SQL Query Engine',
