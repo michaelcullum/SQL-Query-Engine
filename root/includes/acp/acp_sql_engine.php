@@ -28,6 +28,7 @@ class acp_sql_engine
 	{
 		global $db, $user, $auth, $template;
 		global $config, $phpbb_root_path, $phpbb_admin_path, $phpEx;
+		global $table_prefix;
 		switch($mode)
 		{
 			case 'index':
