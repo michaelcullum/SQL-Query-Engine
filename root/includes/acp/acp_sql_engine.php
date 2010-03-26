@@ -57,7 +57,7 @@ class acp_sql_engine
 					trigger_error($message);
 				}	
 				$template->assign_vars(array(
-					'U_ACTION'		=> $this->u_action;
+					'U_ACTION'		=> $this->u_action
 				));
 				break;
 		}		
