@@ -3,10 +3,10 @@
 *
 * acp_sql_engine [English]
 *
-* @author SA007 (http://sa007.cz.cc)
+* @author SA007 (http://sa007.cz.cc), imkingdavid (http://phpbbdevelopers.net)
 * @package SQL Query Engine acp lang file
-* @version [ALPHA] 1.0.0 "Kela"
-* @copyright (c) SA007 (Michael Cullum)
+* @version [ALPHA] 0.0.1 "Kela"
+* @copyright (c) SA007 (Michael Cullum), imkingdavid (David King)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License 
 *
 */
