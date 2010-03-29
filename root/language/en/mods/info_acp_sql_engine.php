@@ -28,6 +28,9 @@ $lang = array_merge($lang, array(
 	'SQL_ENGINE_QUERIES_PASS'	=> 'The queries have been successfully completed.',
 	'SQL_ENGINE_RETURN'			=> 'Click here to return to the form.',
 	'SQL_MUST_BE_FOUNDER'		=> 'Only board founders may access this module.',
+	'SQL_QUERY_ENGINE_PROCESSING'	=> 'Processing SQL...',
+	'SUCCESS'					=> 'Success',
+	'FAIL'						=> 'Failed',
 	'SQL_SUBMIT'				=> 'Submit',
 ));
 

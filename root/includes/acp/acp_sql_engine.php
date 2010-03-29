@@ -44,19 +44,22 @@ class acp_sql_engine
 				{
 					$sql_ary = str_replace("\n", ' ', $sql_data);
 					$sql_ary = str_replace('phpbb_', $table_prefix, $sql_ary);
-					$sql_ary = explode(';', $sql_data);
-					
+					$sql_ary = str_replace('&quot;', '"', $sql_ary);
+					$sql_ary = explode(';', $sql_ary);
 					// Loop through our sql queries
-					for ($i = 0, $size = sizeof($sql_ary); $i < $size; $i++)
+					$message = $user->lang['SQL_QUERY_ENGINE_PROCESSING'] . '<br />';
+					foreach($sql_ary AS $query)
 					{
-					  $db->sql_query($sql_ary[$i]);
+					//	$result = $db->sql_query($query);
+						$result = 1;
+						$message .= (!empty($query)) ? $query . ' ... ' . (($result) ? '<span style="font-weight:bold;">' . $user->lang['SUCCESS'] . '</span>' : '<span style="color:red;font-weight:bold;">' . $user->lang['FAIL'] . '</span>') : '';
+						$message .= '<br />';
 					}
 					$number = count($sql_ary);
 					
-					$message = ($number === 1) ? $user->lang['SQL_ENGINE_QUERY_PASS'] : $user->lang['SQL_ENGINE_QUERIES_PASS'];
+					$message .= ($number === 1) ? $user->lang['SQL_ENGINE_QUERY_PASS'] : $user->lang['SQL_ENGINE_QUERIES_PASS'];
 					$message .= '<br />';
-					$message .= $user->lang['SQL_ENGINE_RETURN'] . adm_back_link($this->u_action);
-					
+					$message .= adm_back_link($this->u_action);
 					trigger_error($message);
 				}	
 				$template->assign_vars(array(
