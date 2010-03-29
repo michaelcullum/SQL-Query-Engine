@@ -1,4 +1,15 @@
 <?php
+/** 
+*
+* acp_sql_engine [English]
+*
+* @author SA007 (http://sa007.cz.cc), imkingdavid (http://phpbbdevelopers.net)
+* @package SQL Query Engine acp lang file
+* @version [ALPHA] 0.0.2 "Kela"
+* @copyright (c) SA007 (Michael Cullum), imkingdavid (David King)
+* @license http://opensource.org/licenses/gpl-license.php GNU Public License 
+*
+*/
 if (!defined('IN_PHPBB'))
 {
 	exit;

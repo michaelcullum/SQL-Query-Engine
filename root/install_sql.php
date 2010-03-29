@@ -1,9 +1,11 @@
 <?php
 /**
 *
-* @package SQL Query Engine
-* @copyright (c) 2010 Unknown Bliss
-* @license http://opensource.org/licenses/gpl-license.php GNU Public License
+* @author SA007 (http://sa007.cz.cc), imkingdavid (http://phpbbdevelopers.net)
+* @package SQL Query Engine UMIL
+* @version [ALPHA] 0.0.2 "Kela"
+* @copyright (c) SA007 (Michael Cullum), imkingdavid (David King)
+* @license http://opensource.org/licenses/gpl-license.php GNU Public License 
 *
 */
 
@@ -31,7 +33,7 @@ $mod_name = 'SQL Query Engine';
 * The name of the config variable which will hold the currently installed version
 * You do not need to set this yourself, UMIL will handle setting and updating the version itself.
 */
-$version_config_name = 'sql_query_engine_version';
+$version_config_name = '[AlPHA] 0.0.2';
 
 /*
 * The language file which will be included when installing
@@ -71,7 +73,7 @@ $options = array(
 * The version numbering must otherwise be compatible with the version_compare function - http://php.net/manual/en/function.version-compare.php
 */
 $versions = array(
-	'1.0.0a1' => array(
+	'0.0.2' => array(
 		'module_add' => array(
 			array('acp', 'ACP_GENERAL_TASKS', 'ACP_SQL_ENGINE'),
 			array('acp', 'ACP_SQL_ENGINE', array(

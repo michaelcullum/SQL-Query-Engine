@@ -35,15 +35,22 @@ This is a highly dangerous tool, and when used improperly, it can do unwanted ac
 				<email><![CDATA[imkingdavid@gmail.com]]></email>
 			</author>
 		</author-group>
-		<mod-version>0.0.1</mod-version>
+		<mod-version>0.0.2</mod-version>
 		<installation>
 			<level>easy</level>
-			<time>60</time>
+			<time>120</time>
 			<target-version>3.0.7-PL1</target-version>
 		</installation>
 		<history>
 			<entry>
-				<date>2010-04-26</date>
+				<date>2010-03-29</date>
+				<rev-version>0.0.2</rev-version>
+				<changelog lang="en">
+					<change><![CDATA[Updated to Release 0.0.2 Fixed Bug #5: In queries, " is no longer converted to &quot;, which broke the query.]]></change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2010-03-26</date>
 				<rev-version>0.0.1</rev-version>
 				<changelog lang="en">
 					<change><![CDATA[Alpha Release]]></change>
@@ -57,8 +64,11 @@ This is a highly dangerous tool, and when used improperly, it can do unwanted ac
 			<file from="root/includes/acp/acp_sql_engine.php" to="/includes/acp/acp_sql_engine.php"/>
 			<file from="root/includes/acp/info/acp_sql_engine.php" to="/includes/acp/info/acp_sql_engine.php"/>
 			<file from="root/language/en/mods/info_acp_sql_engine.php" to="/language/en/mods/info_acp_sql_engine.php"/>
+			<file from="root/umil/*.*" to="/umil/*.*"/>
+			<file from="root/install_sql.php" to="/install_sql.php"/>
 		</copy>
 		<php-installer><![CDATA[/install_sql.php]]></php-installer>
-		<diy-instructions lang="en"><![CDATA[Clear your cache and use wisely.]]></diy-instructions>
+		<diy-instructions lang="en"><![CDATA[Deleted or Rename install_sql.php after use to prevent exploits or confusion when updating etc.,
+Refresh your browser and use wisely.]]></diy-instructions>
 	</action-group>
 </mod>

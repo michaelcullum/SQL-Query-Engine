@@ -3,7 +3,7 @@
 *
 * @author SA007 (http://sa007.cz.cc), imkingdavid (http://phpbbdevelopers.net)
 * @package SQL Query Engine acp
-* @version [ALPHA] 0.0.1 "Kela"
+* @version [ALPHA] 0.0.2 "Kela"
 * @copyright (c) SA007 (Michael Cullum), imkingdavid (David King)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License 
 *
@@ -52,7 +52,7 @@ class acp_sql_engine
 					{
 					//	$result = $db->sql_query($query);
 						$result = 1;
-						$message .= (!empty($query)) ? $query . ' ... ' . (($result) ? '<span style="font-weight:bold;">' . $user->lang['SUCCESS'] . '</span>' : '<span style="color:red;font-weight:bold;">' . $user->lang['FAIL'] . '</span>') : '';
+						$message .= (!empty($query)) ? $query . ' ... ' . (($result) ? '<span style="font-weight:bold;">' . $user->lang['SQL_SUCCESS'] . '</span>' : '<span style="color:red;font-weight:bold;">' . $user->lang['SQL_FAIL'] . '</span>') : '';
 						$message .= '<br />';
 					}
 					$number = count($sql_ary);
