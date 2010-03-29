@@ -42,9 +42,9 @@ class acp_sql_engine
 				$sql_data = request_var('sql_data', '');
 				if ($submit && $sql_data)
 				{
-					$sql_ary = str_replace("\n", ' ', $sql_data);
+					$sql_ary = htmlspecialchars_decode($sql_data);
+					$sql_ary = str_replace("\n", ' ', $sql_ary);
 					$sql_ary = str_replace('phpbb_', $table_prefix, $sql_ary);
-					$sql_ary = str_replace('&quot;', '"', $sql_ary);
 					$sql_ary = explode(';', $sql_ary);
 					// Loop through our sql queries
 					$message = $user->lang['SQL_QUERY_ENGINE_PROCESSING'] . '<br />';
