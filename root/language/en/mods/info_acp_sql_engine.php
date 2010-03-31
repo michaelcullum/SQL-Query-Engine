@@ -5,7 +5,7 @@
 *
 * @author SA007 (http://sa007.cz.cc), imkingdavid (http://phpbbdevelopers.net)
 * @package SQL Query Engine acp lang file
-* @version [ALPHA] 0.0.2 "Kela"
+* @version [ALPHA] 0.0.3 "Kela"
 * @copyright (c) SA007 (Michael Cullum), imkingdavid (David King)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License 
 *
@@ -32,6 +32,14 @@ $lang = array_merge($lang, array(
 	'SQL_SUCCESS'					=> 'Success',
 	'SQL_FAIL'						=> 'Failed',
 	'SQL_SUBMIT'					=> 'Submit',
+	
+	//Version Check
+	'SERVER_DOWN'					=> 'The version check server is down. Please click %shere%s to find the latest news and updates.',
+	'UP_TO_DATE'					=> 'You have the latest version of SQL Query Engine installed.',
+	'NOT_UP_TO_DATE'				=> 'A new version of SQL Query Engine has been released. Please update as soon as possible make sure your board is secure!',
+	'UPDATE_TO'						=> 'Update to %1$s',
+	'CURRENT_VERSION'				=> 'Current Version',
+	'LATEST_VERSION'				=> 'Latest Version',
 ));
 
 ?>
