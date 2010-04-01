@@ -35,7 +35,7 @@ This is a highly dangerous tool, and when used improperly, it can do unwanted ac
 				<email><![CDATA[imkingdavid@gmail.com]]></email>
 			</author>
 		</author-group>
-		<mod-version>0.0.2</mod-version>
+		<mod-version>0.0.3</mod-version>
 		<installation>
 			<level>easy</level>
 			<time>120</time>
@@ -43,10 +43,21 @@ This is a highly dangerous tool, and when used improperly, it can do unwanted ac
 		</installation>
 		<history>
 			<entry>
+				<date>2010-04-01</date>
+				<rev-version>0.0.3</rev-version>
+				<changelog lang="en">
+					<change><![CDATA[Updated to 0.0.3]]></change>
+					<change><![CDATA[Added Version Check]]></change>
+					<change><![CDATA[Fixed Bug #9]]></change>
+				</changelog>
+			</entry>
+			<entry>
 				<date>2010-03-29</date>
 				<rev-version>0.0.2</rev-version>
 				<changelog lang="en">
-					<change><![CDATA[Updated to Release 0.0.2 Fixed Bug #5: In queries, " is no longer converted to &quot;, which broke the query.]]></change>
+					<change><![CDATA[Updated to Release 0.0.2]]></change>
+					<change><![CDATA[Fixed Bug #5]]></change>
+					<change><![CDATA[Added SQL Output Results]]></change>
 				</changelog>
 			</entry>
 			<entry>
