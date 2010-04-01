@@ -33,7 +33,7 @@ $mod_name = 'SQL Query Engine';
 * The name of the config variable which will hold the currently installed version
 * You do not need to set this yourself, UMIL will handle setting and updating the version itself.
 */
-$version_config_name = '[AlPHA] 0.0.2';
+$version_config_name = 'sql_query_engine_version';
 
 /*
 * The language file which will be included when installing
@@ -73,7 +73,27 @@ $options = array(
 * The version numbering must otherwise be compatible with the version_compare function - http://php.net/manual/en/function.version-compare.php
 */
 $versions = array(
+	'0.0.1' => array(
+		'module_add' => array(
+			array('acp', 'ACP_GENERAL_TASKS', 'ACP_SQL_ENGINE'),
+			array('acp', 'ACP_SQL_ENGINE', array(
+					'module_basename'		=> 'sql_engine',
+					'modes'					=> array('index'),
+				),
+			),
+		),
+	),
 	'0.0.2' => array(
+		'module_add' => array(
+			array('acp', 'ACP_GENERAL_TASKS', 'ACP_SQL_ENGINE'),
+			array('acp', 'ACP_SQL_ENGINE', array(
+					'module_basename'		=> 'sql_engine',
+					'modes'					=> array('index'),
+				),
+			),
+		),
+	),
+	'0.0.3' => array(
 		'module_add' => array(
 			array('acp', 'ACP_GENERAL_TASKS', 'ACP_SQL_ENGINE'),
 			array('acp', 'ACP_SQL_ENGINE', array(
