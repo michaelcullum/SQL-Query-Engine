@@ -35,13 +35,21 @@ This is a highly dangerous tool, and when used improperly, it can do unwanted ac
 				<email><![CDATA[imkingdavid@gmail.com]]></email>
 			</author>
 		</author-group>
-		<mod-version>0.0.3</mod-version>
+		<mod-version>0.0.4</mod-version>
 		<installation>
 			<level>easy</level>
 			<time>120</time>
 			<target-version>3.0.7-PL1</target-version>
 		</installation>
 		<history>
+			<entry>
+				<date>2010-04-02</date>
+				<rev-version>0.0.4</rev-version>
+				<changelog lang="en">
+					<change><![CDATA[Adding IN_PHPBB Checks to ACP Info Include File]]></change>
+					<change><![CDATA[Adding IN_PHPBB Checks to Main MOD Language File]]></change>
+				</changelog>
+			</entry>
 			<entry>
 				<date>2010-04-01</date>
 				<rev-version>0.0.3</rev-version>
