@@ -97,7 +97,7 @@ class acp_sql_engine
 		$errstr = '';
 		$errno = 0;
 
-		$info = get_remote_file('www.phpbbdevelopers.net', '/modver',
+		$info = get_remote_file('www.phpbbdevelopers.net', '/modver/sa007',
 				'sql_query_engine.txt', $errstr, $errno);
 	
 		if ($info === false)
