@@ -3,7 +3,7 @@
 *
 * @author SA007 (http://sa007.cz.cc), imkingdavid (http://phpbbdevelopers.net)
 * @package SQL Query Engine UMIL
-* @version [ALPHA] 0.0.3 "Kela"
+* @version 1.0.0 "Kela"
 * @copyright (c) SA007 (Michael Cullum), imkingdavid (David King)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License 
 *
@@ -94,6 +94,26 @@ $versions = array(
 		),
 	),
 	'0.0.3' => array(
+		'module_add' => array(
+			array('acp', 'ACP_GENERAL_TASKS', 'ACP_SQL_ENGINE'),
+			array('acp', 'ACP_SQL_ENGINE', array(
+					'module_basename'		=> 'sql_engine',
+					'modes'					=> array('index'),
+				),
+			),
+		),
+	),
+		'0.0.4' => array(
+		'module_add' => array(
+			array('acp', 'ACP_GENERAL_TASKS', 'ACP_SQL_ENGINE'),
+			array('acp', 'ACP_SQL_ENGINE', array(
+					'module_basename'		=> 'sql_engine',
+					'modes'					=> array('index'),
+				),
+			),
+		),
+	),
+			'1.0.0' => array(
 		'module_add' => array(
 			array('acp', 'ACP_GENERAL_TASKS', 'ACP_SQL_ENGINE'),
 			array('acp', 'ACP_SQL_ENGINE', array(
