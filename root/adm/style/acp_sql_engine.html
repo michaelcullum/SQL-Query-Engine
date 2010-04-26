@@ -24,7 +24,6 @@
 <!-- ENDIF -->
 
 <fieldset>
-    <legend></legend>
     <dl>
         <dt><label>{L_CURRENT_VERSION}</label></dt>
         <dd><strong>{CURRENT_VERSION}</strong></dd>
@@ -36,16 +35,15 @@
 </fieldset>
 
 <form action="{U_ACTION}" method="post">
-	<fieldset><legend>{L_SQL_ENGINE}</legend>
-    <dl>
-    <dt><h4 style="font-family:verdana;color:red">{L_SQL_ENGINE_DISCLAIMER}</h4></dt>
-    <dd>
-   <textarea style="width: 80%; height: 200px;" name="sql_data"></textarea>
-   </dd>
-   </dl>
-   <p class="submit-buttons">
-   <input type="submit" class="button1" name="submit" value="{L_SQL_SUBMIT}" />
-   </p>
+   <fieldset>
+      <legend>{L_SQL_ENGINE}</legend>
+      <p style="color: red;"><strong>{L_SQL_ENGINE_DISCLAIMER}</strong></p>
+      <textarea rows="15" cols="76" style="width: 99%; height: 200px;" name="sql_data"></textarea>
+
+      <p class="submit-buttons">
+         <input type="submit" class="button1" name="submit" value="{L_SQL_SUBMIT}" />
+         {S_FORM_TOKEN}
+      </p>
    </fieldset>
 </form>
 
