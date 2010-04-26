@@ -12,14 +12,11 @@
 		<author-notes lang="en"><![CDATA[Disclaimer:
 SA007, Michael C, SA007's Blast Lab, and his/its affiliates/co-developers and technical advisor's do not accept any responsibility for any person that uses the SQL Query Engine and its consequences.
 
-Also this is a dangerous MOD when used improperly. It changes your root database which can cause to corrupted databases, loss of data ect., We do not recommended you use this MOD unless you are following another MOD's Install instructions or are a developer and know what you are doing. Always make a backup of your database before executing commands on the SQL Engine.
+Also this is a dangerous MOD when used improperly. It changes your root database which can cause to corrupted databases, loss of data, etc. We do not recommended you use this MOD unless you are following another MOD's Install instructions or are a developer and know what you are doing. Always make a backup of your database before executing commands on the SQL Engine.
 
 A further note, this is available to use by all founders of your forum install, make sure you trust all the founders of your board before you install this MOD.
 
-Anything that happens as a result of using the SQL Query Engine is in no way our responsibility. However we do ask you submit it to our issue tracker at sa007.cz.cc for further investigation so that we may look into the problem and what caused it.
-
-Note:
-This is a highly dangerous tool, and when used improperly, it can do unwanted actions your forum. This tool should only be used if you have been instructed to do so, or if you know what you are doing. Do NOT use this without first backing up your database, or you risk permanently damaging your database. If an error does occur, simply restore your backed up database.]]></author-notes>
+Anything that happens as a result of using the SQL Query Engine is in no way our responsibility. However we do ask you submit it to our issue tracker at sa007.cz.cc for further investigation so that we may look into the problem and what caused it.]]></author-notes>
 		<author-group>
 			<author>
 				<realname><![CDATA[Michael C. (SA007)]]></realname>
@@ -34,7 +31,7 @@ This is a highly dangerous tool, and when used improperly, it can do unwanted ac
 				<email><![CDATA[imkingdavid@gmail.com]]></email>
 			</author>
 		</author-group>
-		<mod-version>1.0.0</mod-version>
+		<mod-version>1.0.1</mod-version>
 		<installation>
 			<level>easy</level>
 			<time>120</time>
@@ -42,28 +39,10 @@ This is a highly dangerous tool, and when used improperly, it can do unwanted ac
 		</installation>
 		<history>
 			<entry>
-				<date>2010-04-06</date>
-				<rev-version>1.0.0</rev-version>
+				<date>2010-03-26</date>
+				<rev-version>0.0.1</rev-version>
 				<changelog lang="en">
-					<change><![CDATA[Released as Stable Release]]></change>
-					<change><![CDATA[Updated UMIL]]></change>
-				</changelog>
-			</entry>
-			<entry>
-				<date>2010-04-02</date>
-				<rev-version>0.0.4</rev-version>
-				<changelog lang="en">
-					<change><![CDATA[Adding IN_PHPBB Checks to ACP Info Include File]]></change>
-					<change><![CDATA[Adding IN_PHPBB Checks to Main MOD Language File]]></change>
-				</changelog>
-			</entry>
-			<entry>
-				<date>2010-04-01</date>
-				<rev-version>0.0.3</rev-version>
-				<changelog lang="en">
-					<change><![CDATA[Updated to 0.0.3]]></change>
-					<change><![CDATA[Added Version Check]]></change>
-					<change><![CDATA[Fixed Bug #9]]></change>
+					<change><![CDATA[Alpha Release]]></change>
 				</changelog>
 			</entry>
 			<entry>
@@ -76,24 +55,48 @@ This is a highly dangerous tool, and when used improperly, it can do unwanted ac
 				</changelog>
 			</entry>
 			<entry>
-				<date>2010-03-26</date>
-				<rev-version>0.0.1</rev-version>
+				<date>2010-04-01</date>
+				<rev-version>0.0.3</rev-version>
 				<changelog lang="en">
-					<change><![CDATA[Alpha Release]]></change>
+					<change><![CDATA[Updated to 0.0.3]]></change>
+					<change><![CDATA[Added Version Check]]></change>
+					<change><![CDATA[Fixed Bug #9]]></change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2010-04-02</date>
+				<rev-version>0.0.4</rev-version>
+				<changelog lang="en">
+					<change><![CDATA[Adding IN_PHPBB Checks to ACP Info Include File]]></change>
+					<change><![CDATA[Adding IN_PHPBB Checks to Main MOD Language File]]></change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2010-04-06</date>
+				<rev-version>1.0.0</rev-version>
+				<changelog lang="en">
+					<change><![CDATA[Released as Stable Release]]></change>
+					<change><![CDATA[Updated UMIL]]></change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2010-04-26</date>
+				<rev-version>1.0.1</rev-version>
+				<changelog lang="en">
+					<change><![CDATA[UMIL Updated]]></change>
+					<change><![CDATA[MODX Typos and Repeated Text sorted]]></change>
+					<change><![CDATA[Removed leading slash from UMIF File in MODX]]></change>
+					<change><![CDATA[Changing the whole copy action system]]></change>
+					<change><![CDATA[Removed Commented text in UMIF File]]></change>
 				</changelog>
 			</entry>
 		</history>
 	</header>
 	<action-group>
 		<copy>
-			<file from="root/adm/style/acp_sql_engine.html" to="/adm/style/acp_sql_engine.html"/>
-			<file from="root/includes/acp/acp_sql_engine.php" to="/includes/acp/acp_sql_engine.php"/>
-			<file from="root/includes/acp/info/acp_sql_engine.php" to="/includes/acp/info/acp_sql_engine.php"/>
-			<file from="root/language/en/mods/info_acp_sql_engine.php" to="/language/en/mods/info_acp_sql_engine.php"/>
-			<file from="root/umil/*.*" to="/umil/*.*"/>
-			<file from="root/install_sql.php" to="/install_sql.php"/>
+			<file from="root/*.*" to="*.*"/>
 		</copy>
-		<php-installer><![CDATA[/install_sql.php]]></php-installer>
+		<php-installer><![CDATA[install_sql.php]]></php-installer>
 		<diy-instructions lang="en"><![CDATA[Deleted or Rename install_sql.php after use.
 Refresh your browser and use wisely.]]></diy-instructions>
 	</action-group>
