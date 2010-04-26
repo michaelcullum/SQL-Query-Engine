@@ -3,7 +3,7 @@
 *
 * @author SA007 (http://sa007.cz.cc), imkingdavid (http://phpbbdevelopers.net)
 * @package SQL Query Engine UMIL
-* @version 1.0.0 "Kela"
+* @version 1.0.1 "Kela"
 * @copyright (c) SA007 (Michael Cullum), imkingdavid (David King)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License 
 *
@@ -26,94 +26,14 @@ if (!file_exists($phpbb_root_path . 'umil/umil_auto.' . $phpEx))
 	trigger_error('Please download the latest UMIL (Unified MOD Install Library) from: <a href="http://www.phpbb.com/mods/umil/">phpBB.com/mods/umil</a>', E_USER_ERROR);
 }
 
-// The name of the mod to be displayed during installation.
 $mod_name = 'SQL Query Engine';
 
-/*
-* The name of the config variable which will hold the currently installed version
-* You do not need to set this yourself, UMIL will handle setting and updating the version itself.
-*/
 $version_config_name = 'sql_query_engine_version';
 
-/*
-* The language file which will be included when installing
-* Language entries that should exist in the language file for UMIL (replace $mod_name with the mod's name you set to $mod_name above)
-* $mod_name
-* 'INSTALL_' . $mod_name
-* 'INSTALL_' . $mod_name . '_CONFIRM'
-* 'UPDATE_' . $mod_name
-* 'UPDATE_' . $mod_name . '_CONFIRM'
-* 'UNINSTALL_' . $mod_name
-* 'UNINSTALL_' . $mod_name . '_CONFIRM'
-*/
 $language_file = 'mods/info_acp_sql_engine_install';
 
-/*
-* Options to display to the user (this is purely optional, if you do not need the options you do not have to set up this variable at all)
-* Uses the acp_board style of outputting information, with some extras (such as the 'default' and 'select_user' options)
-
-$options = array(
-	'test_username'	=> array('lang' => 'TEST_USERNAME', 'type' => 'text:40:255', 'explain' => true, 'default' => $user->data['username'], 'select_user' => true),
-	'test_boolean'	=> array('lang' => 'TEST_BOOLEAN', 'type' => 'radio:yes_no', 'default' => true),
-);
-*/
-
-/*
-* Optionally we may specify our own logo image to show in the upper corner instead of the default logo.
-* $phpbb_root_path will get prepended to the path specified
-* Image height should be 50px to prevent cut-off or stretching.
-*/
-//$logo_img = 'styles/prosilver/imageset/site_logo.gif';
-
-/*
-* The array of versions and actions within each.
-* You do not need to order it a specific way (it will be sorted automatically), however, you must enter every version, even if no actions are done for it.
-*
-* You must use correct version numbering.  Unless you know exactly what you can use, only use X.X.X (replacing X with an integer).
-* The version numbering must otherwise be compatible with the version_compare function - http://php.net/manual/en/function.version-compare.php
-*/
 $versions = array(
-	'0.0.1' => array(
-		'module_add' => array(
-			array('acp', 'ACP_GENERAL_TASKS', 'ACP_SQL_ENGINE'),
-			array('acp', 'ACP_SQL_ENGINE', array(
-					'module_basename'		=> 'sql_engine',
-					'modes'					=> array('index'),
-				),
-			),
-		),
-	),
-	'0.0.2' => array(
-		'module_add' => array(
-			array('acp', 'ACP_GENERAL_TASKS', 'ACP_SQL_ENGINE'),
-			array('acp', 'ACP_SQL_ENGINE', array(
-					'module_basename'		=> 'sql_engine',
-					'modes'					=> array('index'),
-				),
-			),
-		),
-	),
-	'0.0.3' => array(
-		'module_add' => array(
-			array('acp', 'ACP_GENERAL_TASKS', 'ACP_SQL_ENGINE'),
-			array('acp', 'ACP_SQL_ENGINE', array(
-					'module_basename'		=> 'sql_engine',
-					'modes'					=> array('index'),
-				),
-			),
-		),
-	),
-		'0.0.4' => array(
-		'module_add' => array(
-			array('acp', 'ACP_GENERAL_TASKS', 'ACP_SQL_ENGINE'),
-			array('acp', 'ACP_SQL_ENGINE', array(
-					'module_basename'		=> 'sql_engine',
-					'modes'					=> array('index'),
-				),
-			),
-		),
-	),
-			'1.0.0' => array(
+	'1.0.0' => array(
 		'module_add' => array(
 			array('acp', 'ACP_GENERAL_TASKS', 'ACP_SQL_ENGINE'),
 			array('acp', 'ACP_SQL_ENGINE', array(
