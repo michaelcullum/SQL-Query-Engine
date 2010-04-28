@@ -58,7 +58,7 @@ class acp_sql_engine
 				));
 				$this->page_title = 'ACP_SQL_ENGINE';
 				$this->tpl_name = 'acp_sql_engine';
-				if(!$user->data['user_type'] == 3) // See if the user is a founder.
+				if(!$user->data['user_type'] == USER_FOUNDER) // See if the user is a founder.
 				{
 					trigger_error($user->lang['SQL_MUST_BE_FOUNDER']);
 				}
@@ -74,7 +74,6 @@ class acp_sql_engine
 					$message = $user->lang['SQL_QUERY_ENGINE_PROCESSING'] . '<br />';
 					foreach($sql_ary AS $query)
 					{
-					//	$result = $db->sql_query($query);
 						$result = 1;
 						$message .= (!empty($query)) ? $query . ' ... ' . (($result) ? '<span style="font-weight:bold;">' . $user->lang['SQL_SUCCESS'] . '</span>' : '<span style="color:red;font-weight:bold;">' . $user->lang['SQL_FAIL'] . '</span>') : '';
 						$message .= '<br />';
