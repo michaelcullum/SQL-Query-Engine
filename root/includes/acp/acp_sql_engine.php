@@ -62,28 +62,48 @@ class acp_sql_engine
 				{
 					trigger_error($user->lang['SQL_MUST_BE_FOUNDER']);
 				}
-				$submit = (isset($_POST['submit'])) ? true : false;
-				$sql_data = request_var('sql_data', '');
+				$submit = (isset($_POST['ready'])) ? true : false;
+				$sql_data = request_var('sql_data', '', true);
 				if ($submit && $sql_data)
 				{
 					$sql_ary = htmlspecialchars_decode($sql_data);
 					$sql_ary = str_replace("\n", ' ', $sql_ary);
 					$sql_ary = str_replace('phpbb_', $table_prefix, $sql_ary);
 					$sql_ary = explode(';', $sql_ary);
-					// Loop through our sql queries
+
 					$message = $user->lang['SQL_QUERY_ENGINE_PROCESSING'] . '<br />';
-					foreach($sql_ary AS $query)
-					{
-						$result = 1;
-						$message .= (!empty($query)) ? $query . ' ... ' . (($result) ? '<span style="font-weight:bold;">' . $user->lang['SQL_SUCCESS'] . '</span>' : '<span style="color:red;font-weight:bold;">' . $user->lang['SQL_FAIL'] . '</span>') : '';
-						$message .= '<br />';
-					}
 					$number = count($sql_ary);
-					
-					$message .= ($number === 1) ? $user->lang['SQL_ENGINE_QUERY_PASS'] : $user->lang['SQL_ENGINE_QUERIES_PASS'];
-					$message .= '<br />';
-					$message .= adm_back_link($this->u_action);
-					trigger_error($message);
+					if(confirm_box(true))
+					{
+						
+						foreach($sql_ary AS $key => $query)
+						{
+							$query = trim($query); // remove leading and trailing white space.
+							//Dont do empty or blank queries:
+							if(!empty($query))
+							{
+								$result = $db->sql_query($query);
+								$message .= $query . ';'; // add the query and append a semi-colon
+								$message .= ($result) ? ' ...<span style="color:white;font-weight:bold;">' . $user->lang['PASS'] . '</span>' : ' ...<span style="color:white;font-weight:bold;">' . $user->lang['FAIL'] . '</span>';
+								$message .= '<br />';
+								
+								$db->sql_freeresult($result);
+							}
+						}
+						$message .= adm_back_link($this->u_action);
+						trigger_error($message);
+					}
+					else
+					{
+						$s_hidden_fields = build_hidden_fields(array(
+							'submit'    => true,
+							'sql_data' => $sql_data,
+							'ready'		=> true,
+							)
+						);
+						$sql_data = implode('<br />', $sql_ary);
+						confirm_box(false, sprintf($user->lang['QUERY_CONFIRM'], $sql_data), $s_hidden_fields);
+					}
 				}	
 				$template->assign_vars(array(
 					'U_ACTION'		=> $this->u_action
