@@ -78,7 +78,7 @@ Anything that happens as a result of using the SQL Query Engine is in no way our
 				</changelog>
 			</entry>
 			<entry>
-				<date>2010-04-26</date>
+				<date>2010-05-02</date>
 				<rev-version>1.0.1</rev-version>
 				<changelog lang="en">
 					<change><![CDATA[UMIL Updated]]></change>
