@@ -3,7 +3,7 @@
 *
 * @author SA007 (http://sa007.cz.cc), imkingdavid (http://phpbbdevelopers.net)
 * @package SQL Query Engine acp
-* @version 1.0.0 "Kela"
+* @version 1.0.1 "Kela"
 * @copyright (c) SA007 (Michael Cullum), imkingdavid (David King)
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License 
 *
@@ -33,7 +33,7 @@ class acp_sql_engine
 		{
 			case 'index':
 				// MOD Version -- Change when the MOD gets updated
-				define('MOD_VERSION', '1.0.0');
+				define('MOD_VERSION', '1.0.1');
 				$info = $this->obtain_latest_mod_version_info();
 				$info = explode("\n", $info);
 				$modversion = trim($info[0]);
