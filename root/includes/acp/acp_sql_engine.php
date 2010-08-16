@@ -58,7 +58,7 @@ class acp_sql_engine
 				));
 				$this->page_title = 'ACP_SQL_ENGINE';
 				$this->tpl_name = 'acp_sql_engine';
-				if(!$user->data['user_type'] == USER_FOUNDER) // See if the user is a founder.
+				if($user->data['user_type'] != USER_FOUNDER) // See if the user is a founder.
 				{
 					trigger_error($user->lang['SQL_MUST_BE_FOUNDER']);
 				}
